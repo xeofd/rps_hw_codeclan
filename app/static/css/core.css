@@ -34,6 +34,9 @@ main{
 .winner{
     color: rgb(27, 211, 21);
 }
+.centered{
+    text-align: center;
+}
 
 input, select{
     margin: 10px;
