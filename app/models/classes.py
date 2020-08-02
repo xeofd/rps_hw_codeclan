@@ -12,23 +12,12 @@ class Player:
 # their choices to generate a winner && loser
 
 class Game:
-    def __init__(self, player_1, player_2):
-        self.player_1 = player_1
-        self.player_2 = player_2
+    def __init__(self):
+        self.players = []
 
     # class function
+    def add_players_to_game(self, player):
+        self.players.append(player)
+
     def win_check(self):
-        vs1 = self.player_1.choice
-        vs2 = self.player_2.choice
-        if (vs1 == 'rock' and vs2 == 'scissors'):
-            return self.player_1.name
-        elif (vs1 == 'scissors' and vs2 == 'paper'):
-            return self.player_1.name
-        elif (vs1 == 'paper' and vs2 == 'rock'):
-            return self.player_1.name
-        elif (vs2 == 'rock' and vs1 == 'scissors'):
-            return self.player_1.name
-        elif (vs2 == 'scissors' and vs1 == 'paper'):
-            return self.player_1.name
-        elif (vs2 == 'paper' and vs1 == 'rock'):
-            return self.player_1.name
+        pass

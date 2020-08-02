@@ -22,5 +22,22 @@ a{
 
 main{
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+.flex-container{
+    display: flex;
+}
+.container-50pc{
+    margin: 0 20px;
+    width: 50%;
+}
+.winner{
+    color: rgb(27, 211, 21);
+}
+
+input, select{
+    margin: 10px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
