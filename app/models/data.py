@@ -11,3 +11,6 @@ def add_player(player):
 def start_new_game():
     new_game = Game()
     return new_game
+
+def remove_player():
+    players.pop(1)

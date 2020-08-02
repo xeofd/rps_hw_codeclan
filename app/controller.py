@@ -2,7 +2,7 @@
 from flask import render_template, request, redirect
 from app import app
 from app.models.classes import Player, Game
-from app.models.data import players, add_player, start_new_game
+from app.models.data import players, add_player, start_new_game, remove_player
 
 @app.route('/')
 def index():
@@ -10,6 +10,9 @@ def index():
 
 @app.route('/game/<name>/<choice>')
 def game(name, choice):
+    # check for and remove old players
+    if len(players) >= 2:
+        remove_player()
     # start new game, create new player, add player to list
     current_game = start_new_game()
     new_player = Player(name, choice)
@@ -18,5 +21,5 @@ def game(name, choice):
     for player in players:
         current_game.add_players_to_game(player)
 
-    winner_found =  current_game.players[0].name
+    winner_found =  current_game.win_check()
     return render_template('game.html', winner_found=winner_found)

@@ -20,4 +20,23 @@ class Game:
         self.players.append(player)
 
     def win_check(self):
-        pass
+        # set the players choices
+        p1 = self.players[0].choice
+        p2 = self.players[1].choice
+
+        # run the check
+        if (p1 == p2):
+            return 'DRAW'
+        elif (p1 == 'paper' and p2 == 'rock'):
+            return self.players[0].name
+        elif (p1 == 'rock' and p2 == 'scissors'):
+            return self.players[0].name
+        elif (p1 == 'scissors' and p2 == 'paper'):
+            return self.players[0].name
+            
+        elif (p2 == 'paper' and p1 == 'rock'):
+            return self.players[1].name
+        elif (p2 == 'rock' and p1 == 'scissors'):
+            return self.players[1].name
+        elif (p2 == 'scissors' and p1 == 'paper'):
+            return self.players[1].name
