@@ -1,0 +1,26 @@
+body{
+    color: rgb(24, 24, 24);
+    background: rgb(221, 221, 221);
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+.nav-block{
+    padding: 10px 20px;
+    color: rgb(10, 104, 141);
+    font-size: 20px;
+}
+.nav-block > span{
+    padding: 10px 0;
+    font-size: 36px;
+}
+
+main{
+    width: 50%;
+    margin: 0 auto;
+}

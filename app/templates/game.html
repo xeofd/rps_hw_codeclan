@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="flex-container">
+
+        <div class="50pc">
+
+            <form action="/game/data" method="POST">
+                <input type="text" name="player_name" placeholder="Nickname" />
+                <select name="player_choice">
+                    <option value="rock">ROCK</option>
+                    <option value="paper">PAPER</option>
+                    <option value="scissors">SCISSORS</option>
+                </select>
+                <input type="submit" value="PLAY" />
+            </form>
+
+        </div>
+
+        <div class="50pc">
+            
+        </div>
+
+    </div>
+
+{% endblock %}

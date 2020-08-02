@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- METADATA -->
+    <title>rock, paper, scissors!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINKED FILES -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/core.css') }}">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>ROCK, PAPER, SCISSORS</h1>
+
+        <nav>
+            <a href="/" class="nav-block"><span class="material-icons">home</span>  HOME</a>
+            <a href="/game" class="nav-block"><span class="material-icons">videogame_asset</span>  PLAY</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        {% block content %}{% endblock %}
+
+    </main>
+    
+</body>
+
+</html>
